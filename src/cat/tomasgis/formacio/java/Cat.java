@@ -1,15 +1,15 @@
 package cat.tomasgis.formacio.java;
 
 import cat.tomasgis.formacio.java.interfaces.IHowl;
+import cat.tomasgis.formacio.java.interfaces.IMiaow;
 
 import java.time.LocalDate;
 import java.time.Period;
-import java.util.HashMap;
 
 /**
  * Created by TomasGiS on 4/7/16.
  */
-public class Dog implements IHowl{
+public class Cat implements IMiaow {
 
     /*
      * The fields have private access by default,
@@ -23,7 +23,7 @@ public class Dog implements IHowl{
     protected LocalDate birthDay;
 
     //We must initialize the birthdate
-    public Dog() {
+    public Cat() {
         //this.birthDay = Calendar.getInstance().getTime().getTime();
 
         this.birthDay = LocalDate.now();
@@ -78,8 +78,10 @@ public class Dog implements IHowl{
     }
 
 
+    
     @Override
-    public void howling() {
-        System.out.println("Howl, Howl, Howl!!");
+    public void miaowing(int times) {
+        for (int i=0;i<times;i++)
+            System.out.println("Miaow!!");
     }
 }

@@ -29,6 +29,8 @@ public class Main {
         System.out.println("\nThe data has a value assigned");
         showDogData(doggy);
 
+        doggy.howling();
+
         HashMap<String,Object> parameters = new HashMap<>();
         parameters.put(HashDog.NAME,"Terminator");
         parameters.put(HashDog.OWNER,"Tomas");
