@@ -16,11 +16,7 @@ public class Main {
 
         //Obtenció dels atributs del gos
         System.out.println("The data has not been initialized");
-        System.out.println("Nom: " + doggy.getName());
-        System.out.println("Owner: "+ doggy.getOwnerName());
-        System.out.println("Plate: "+ doggy.getPlateNumber());
-        System.out.println("Skin color: "+ doggy.getSkinColor());
-        System.out.println("Weight: " + doggy.getWeight());
+        showDogData(doggy);
 
         //Modificació dels atributs del gos
         doggy.setName("Doggy");
@@ -31,12 +27,17 @@ public class Main {
 
         //Obtenció dels atributs del gos
         System.out.println("The data has a value assigned");
-        System.out.println("Nom: " + doggy.getName());
-        System.out.println("Owner: " + doggy.getOwnerName());
-        System.out.println("Plate: " + doggy.getPlateNumber());
-        System.out.println("Skin color: " + doggy.getSkinColor());
-        System.out.println("Weight: " + doggy.getWeight());
-        System.out.println("Edat: "+ doggy.getAge());
+        showDogData(doggy);
 
+    }
+
+    public static void showDogData(Dog dog)
+    {
+        System.out.println("Nom: " + dog.getName());
+        System.out.println("Owner: " + dog.getOwnerName());
+        System.out.println("Plate: " + dog.getPlateNumber());
+        System.out.println("Skin color: " + dog.getSkinColor());
+        System.out.println("Weight: " + dog.getWeight());
+        System.out.println("Edat: "+ dog.getAge());
     }
 }
