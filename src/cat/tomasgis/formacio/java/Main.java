@@ -15,7 +15,7 @@ public class Main {
 
 
         //Obtenció dels atributs del gos
-        System.out.println("The data has not been initialized");
+        System.out.println("\nThe data has not been initialized");
         showDogData(doggy);
 
         //Modificació dels atributs del gos
@@ -26,8 +26,19 @@ public class Main {
         doggy.setWeight(45.8f);
 
         //Obtenció dels atributs del gos
-        System.out.println("The data has a value assigned");
+        System.out.println("\nThe data has a value assigned");
         showDogData(doggy);
+
+        HashMap<String,Object> parameters = new HashMap<>();
+        parameters.put(HashDog.NAME,"Terminator");
+        parameters.put(HashDog.OWNER,"Tomas");
+        parameters.put(HashDog.PLATE,123);
+        parameters.put(HashDog.SKIN_COLOR,"Verd");
+        parameters.put(HashDog.WEIGHT,45.8f);
+        //Age is set itself
+
+        HashDog hashDog = new HashDog(parameters);
+        System.out.println(hashDog.toString());
 
     }
 

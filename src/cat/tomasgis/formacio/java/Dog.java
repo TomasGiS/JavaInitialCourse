@@ -18,7 +18,7 @@ public class Dog {
     private int plateNumber;
     private String skinColor;
     private float weight;
-    private LocalDate birthDay;
+    protected LocalDate birthDay;
 
     //We must initialize the birthdate
     public Dog() {
