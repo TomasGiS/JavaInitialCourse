@@ -5,7 +5,7 @@ package cat.tomasgis.formacio.java;
  * Created by TomasGiS on 5/7/16.
  */
 
-public class Pez {
+public class Fish {
 
     String name;
     String coloPrincipal;
