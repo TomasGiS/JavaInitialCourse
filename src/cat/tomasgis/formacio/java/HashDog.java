@@ -127,6 +127,6 @@ public class HashDog extends Dog{
                             this.getWeight(),
                             this.getAge());
 
-        return super.toString();
+        return value;
     }
 }

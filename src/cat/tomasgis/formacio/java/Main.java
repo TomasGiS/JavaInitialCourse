@@ -12,8 +12,6 @@ public class Main {
         //Els atributs/fields són privats per defecte
         //no es poden modificar fora de la classe Dog
 
-
-
         //Obtenció dels atributs del gos
         System.out.println("\nThe data has not been initialized");
         showDogData(doggy);
@@ -40,7 +38,17 @@ public class Main {
         //Age is set itself
 
         HashDog hashDog = new HashDog(parameters);
-        System.out.println(hashDog.toString());
+        System.out.println("\n"+hashDog.toString());
+
+        //Fish testing
+        Pez pez = new Pez();
+        pez.setName("Nemo");
+        pez.setAge(((byte) 9));
+        pez.setAguaDulce(false);
+        pez.setColoPrincipal("Magenta");
+        pez.setColorSecundario("Rosa");
+
+        System.out.println("\nPez: "+ pez.toString() );
 
     }
 

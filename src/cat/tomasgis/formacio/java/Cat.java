@@ -78,7 +78,7 @@ public class Cat implements IMiaow {
     }
 
 
-    
+
     @Override
     public void miaowing(int times) {
         for (int i=0;i<times;i++)
