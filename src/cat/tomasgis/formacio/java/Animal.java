@@ -7,13 +7,14 @@ import java.time.Period;
  * Created by TomasGiS on 5/7/16.
  */
 public class Animal {
-    protected LocalDate birthDay;
+
     /*
          * The fields have private access by default,
          * but is a good practice to set the attribute private
          */
     private String name;
     private String ownerName;
+    protected LocalDate birthDay;
 
     public Animal() {
         this.birthDay = LocalDate.now();

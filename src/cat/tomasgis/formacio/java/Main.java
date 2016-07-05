@@ -1,5 +1,6 @@
 package cat.tomasgis.formacio.java;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Main {
@@ -41,15 +42,54 @@ public class Main {
         System.out.println("\n"+hashDog.toString());
 
         //Fish testing
-        Pez pez = new Pez();
-        pez.setName("Nemo");
-        pez.setAge(((byte) 9));
-        pez.setAguaDulce(false);
-        pez.setColoPrincipal("Magenta");
-        pez.setColorSecundario("Rosa");
+        Fish fish = new Fish();
+        fish.setName("Nemo");
+        fish.setAguaDulce(false);
+        fish.setColoPrincipal("Magenta");
+        fish.setColorSecundario("Rosa");
 
-        System.out.println("\nPez: "+ pez.toString() );
+        System.out.println("\nFish: "+ fish.toString() );
 
+
+        castTesting();
+
+
+        Cat cat = new Cat();
+        cat.setName("Cat");
+        Cat cat2 = new Cat();
+        cat2.setName("Cat2");
+
+        String animal = "animal string";
+        ArrayList<Animal> furgoneta = new ArrayList<>();
+        furgoneta.add(doggy);
+        furgoneta.add(cat);
+        furgoneta.add(cat2);
+        //furgoneta.add(animal);
+
+        System.out.println("\nQuien va en la furgoneta?\n");
+        for (int index=0; index<furgoneta.size();index++)
+            System.out.println(furgoneta.get(index).getName());
+
+
+
+    }
+
+    private static void castTesting() {
+        Fish nemo2 = new Fish();
+        nemo2.setName("Nemo 2");
+        nemo2.setAguaDulce(false);
+        nemo2.setColoPrincipal("Magenta");
+        nemo2.setColorSecundario("Rosa");
+
+        System.out.println("Color principal: " + nemo2.getColoPrincipal());
+
+        Animal animal1 = nemo2;
+        //Cast error
+        //Cat cat2 = (Cat)animal1;
+
+        System.out.println("Color principal animal: " +((Fish)animal1).getColoPrincipal());
+
+        System.out.println("Name: " + animal1.getName());
     }
 
     public static void showDogData(Dog dog)

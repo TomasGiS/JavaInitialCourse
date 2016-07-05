@@ -5,20 +5,14 @@ package cat.tomasgis.formacio.java;
  * Created by TomasGiS on 5/7/16.
  */
 
-public class Fish {
+public class Fish extends Animal{
 
-    String name;
     String coloPrincipal;
     String colorSecundario;
     boolean aguaDulce;
-    byte age;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public Fish() {
+        super();
     }
 
     public String getColoPrincipal() {
@@ -45,13 +39,6 @@ public class Fish {
         this.aguaDulce = aguaDulce;
     }
 
-    public byte getAge() {
-        return age;
-    }
-
-    public void setAge(byte age) {
-        this.age = age;
-    }
 
 
     @Override

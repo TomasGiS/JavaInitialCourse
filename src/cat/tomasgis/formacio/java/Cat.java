@@ -9,40 +9,18 @@ import java.time.Period;
 /**
  * Created by TomasGiS on 4/7/16.
  */
-public class Cat implements IMiaow {
+public class Cat extends Animal implements IMiaow {
 
-    /*
-     * The fields have private access by default,
-     * but is a good practice to set the attribute private
-     */
-    private String name;
-    private String ownerName;
     private int plateNumber;
     private String skinColor;
     private float weight;
-    protected LocalDate birthDay;
+
 
     //We must initialize the birthdate
     public Cat() {
+        super(); // Animal();
         //this.birthDay = Calendar.getInstance().getTime().getTime();
 
-        this.birthDay = LocalDate.now();
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getOwnerName() {
-        return ownerName;
-    }
-
-    public void setOwnerName(String ownerName) {
-        this.ownerName = ownerName;
     }
 
     public int getPlateNumber() {
@@ -68,15 +46,6 @@ public class Cat implements IMiaow {
     public void setWeight(float weight) {
         this.weight = weight;
     }
-
-    public int getAge()
-    {
-
-        LocalDate today = LocalDate.now();
-        Period p = Period.between(this.birthDay, today);
-        return p.getYears();
-    }
-
 
 
     @Override
