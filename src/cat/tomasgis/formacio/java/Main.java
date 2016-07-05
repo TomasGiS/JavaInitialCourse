@@ -36,6 +36,7 @@ public class Main {
         System.out.println("Plate: " + doggy.getPlateNumber());
         System.out.println("Skin color: " + doggy.getSkinColor());
         System.out.println("Weight: " + doggy.getWeight());
+        System.out.println("Edat: "+ doggy.getAge());
 
     }
 }

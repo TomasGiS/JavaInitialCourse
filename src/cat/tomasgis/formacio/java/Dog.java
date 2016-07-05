@@ -1,5 +1,8 @@
 package cat.tomasgis.formacio.java;
 
+import java.time.LocalDate;
+import java.time.Month;
+import java.time.Period;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -18,15 +21,13 @@ public class Dog {
     private int plateNumber;
     private String skinColor;
     private float weight;
-    private long birthDay;
+    private LocalDate birthDay;
 
     //We must initialize the birthdate
     public Dog() {
         //this.birthDay = Calendar.getInstance().getTime().getTime();
 
-        Calendar calendar = Calendar.getInstance();
-        Date date = calendar.getTime();
-        this.birthDay = date.getTime();
+        this.birthDay = LocalDate.now();
     }
 
     public String getName() {
@@ -71,8 +72,10 @@ public class Dog {
 
     public int getAge()
     {
-        //TODO: Calculate the age taking into account the birthday timestamp
-        return 10;
+
+        LocalDate today = LocalDate.now();
+        Period p = Period.between(this.birthDay, today);
+        return p.getYears();
     }
 
 
