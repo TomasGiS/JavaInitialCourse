@@ -20,6 +20,15 @@ public class Dog {
     private float weight;
     private long birthDay;
 
+    //We must initialize the birthdate
+    public Dog() {
+        //this.birthDay = Calendar.getInstance().getTime().getTime();
+
+        Calendar calendar = Calendar.getInstance();
+        Date date = calendar.getTime();
+        this.birthDay = date.getTime();
+    }
+
     public String getName() {
         return name;
     }
